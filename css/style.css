@@ -411,8 +411,12 @@ label:hover{
   .calc_top{
     margin-bottom: 45px;
   }
+  .title_block{
+    width: 40%;
+  }
   .theme_block{
     margin-top: 28px;
+    width: 60%;
   }
   .toggle_num{
     width: 70px;
