@@ -153,7 +153,7 @@ body{
 }
 .calc_buttons:hover{
     cursor: pointer;
-    /*background: #808080 radial-gradient(circle, transparent 1%, #A9A9A9 1%) center/15000%;*/
+    background: #808080;
 }
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
