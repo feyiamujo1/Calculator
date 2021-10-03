@@ -1,0 +1,432 @@
+body{
+    width: 100%;
+    font-family: 'Spartan', sans-serif;
+    font-weight: 700;
+    height: 100%;
+    background-color: var(--bg-color);
+}
+
+/**Themes start here*/
+:root {
+    --primary-color: #181f32;
+    --secondary-color: #252d44;
+    --font-color: white;
+    --button-color: #eae3db;
+    --button-bottom-color: #b3a398;
+    --button-font-color: #414c60;
+    --bg-color: #3b4664;
+    --secondary-button-color: #647299;
+    --secondary-button-bottom-color: #424e75;
+    --secondary-button-font-color: white;
+    --tertiary-button-font-color: white;
+    --tertiary-button-color: #d13f30;
+    --tertiary-button-bottom-color: #942316;
+    --toggle-bg-color: #252d45;
+    --toggle-button-color: #ce4032;
+}
+[data-theme="light"] {
+    --primary-color: #eeeeee;
+    --secondary-color: #d3cdcd;
+    --font-color: #383a2f;
+    --button-color: #e5e4e0;
+    --button-bottom-color: #b4ada2;
+    --button-font-color: #38382e;
+    --bg-color: #e6e6e6;
+    --secondary-button-color: #388187;
+    --secondary-button-bottom-color: #1b6166;
+    --secondary-button-font-color: white;
+    --tertiary-button-font-color: white;
+    --tertiary-button-color: #c85401;
+    --tertiary-button-bottom-color: #c85401;
+    --toggle-bg-color: #d3cdcd;
+    --toggle-button-color: #d05600;
+}
+[data-theme="dark"] {
+    --primary-color: #1e0836;
+    --secondary-color: #1e0836;
+    --font-color: #fff9ff;
+    --button-color: #331b4d;
+    --button-bottom-color: #6e2087;
+    --button-font-color: #ffef4c;
+    --bg-color: #17062a;
+    --secondary-button-color: #56077c;
+    --secondary-button-bottom-color: #b81aec;
+    --secondary-button-font-color: white;
+    --tertiary-button-font-color: #002b33;
+    --tertiary-button-color: #00decf;
+    --tertiary-button-bottom-color: #66fcf3;
+    --toggle-bg-color: #1c0a36;
+    --toggle-button-color: #00e7d1;
+}
+/**Themes end here*/
+
+.calculator{
+    width: 400px;
+    display: block;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.calc_top{
+    width: 100%;
+    display: block;
+    height: 55px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.title_block, .theme_block{
+    display: inline-block;
+    width: 50%;
+    height: 40px;
+}
+.title_block{
+    float: left;
+    font-size: 20px;
+    text-align: left;
+    color: var(--font-color);
+}
+.theme_block{
+    float: right;
+    font-size: 8px;
+    text-align: right;
+    color: var(--font-color);
+}
+.theme_block p{
+    display: inline-block;
+    margin-right: 20px;
+}
+.toggle_num{
+  display:inline-block;
+  width: 35%;
+  margin-right: 3px;
+}
+.toggle_num p{
+  margin: 7px;
+}
+.toggle_sec{
+    margin-bottom: 5px;
+}
+.display_screen{
+    text-align: right;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+}
+.display_screen p{
+    margin: 0px;
+    padding: 0px 15px 0px 10px;
+    color: var(--font-color);
+    display: inline-flex;
+    font-size: 32px;
+    height: 29px;
+}
+.calc_buttons{
+    font-size: 24px;
+    height: 33px;
+    width: 77px;
+    padding: 10px 0px 3px 0px;
+    display: inline-block;
+    margin: 3px 5px 3px 5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--button-color);
+    color: var(--button-font-color);
+    border-bottom: 3px solid var(--button-bottom-color);
+}
+.btn_equal{
+  font-size: 24px;
+    height: 33px;
+    width: 77px;
+    padding: 10px 0px 3px 0px;
+    display: inline-block;
+    margin: 3px 5px 3px 5px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: var(--tertiary-button-color);
+    color: var(--tertiary-button-font-color);
+    border-bottom: 3px solid var(--tertiary-button-bottom-color);
+}
+.btn_equal:hover{
+  cursor: pointer;
+  background: var(--button-color);
+  color: var(--tertiary-button-color);
+  border-bottom: 3px solid var(--tertiary-button-bottom-color);
+}
+.calc_buttons:hover{
+    cursor: pointer;
+    background: #808080 radial-gradient(circle, transparent 1%, #A9A9A9 1%) center/15000%;
+}
+.btn_equal:active, .calc_buttons:active{
+    background-color:#000000;
+    background-size: 100%;
+    transition: 0s;
+    color: cornsilk;
+    border-color: black;
+}
+
+.calc_layout{
+    padding: 0px 0px 5px 0px;
+}
+.btn_layout{
+    padding: 10px 0px 15px 0px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 15px;
+    background-color: var(--secondary-color);
+}
+.display_screen{
+    padding: 20px 0px 20px 0px;
+}
+.btn_reset, .btn_equal{
+    width: 170px;
+}
+.first_row, .second_row, 
+.third_row, .fourth_row, 
+.fifth_row{
+    justify-content: space-evenly;
+    padding: 5px 0px 5px 0px;
+}
+#del_btn, #reset_btn{
+    color: var(--secondary-button-font-color);
+    background-color: var(--secondary-button-color);
+    border-bottom: 3px solid var(--secondary-button-bottom-color);
+    font-size: 15px;
+    padding-top: 18px;
+    padding-bottom: 6px;
+    height: 23px;
+}
+
+.calc_buttons:hover{
+    cursor: pointer;
+}
+
+/**For the entire toggle button**/
+.container {
+    display: inline-block;
+  }  
+.radio-wrapper {
+    width: 62px;
+    height: 20px;
+    padding: 3px 3px 1px;
+    display: inline-block;
+    vertical-align: middle;
+    background: var(--toggle-bg-color);
+    border-radius: 30px;
+    position: relative;
+    margin-left: 1%; 
+}
+.radio-wrapper label {
+    z-index: 9;
+} 
+input[type="radio"] {
+    display: none;
+} 
+.light + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 38%;
+    transition: -webkit-transform 1s;
+    transition: transform 1s;
+    transition: transform 1s, -webkit-transform 1s;
+} 
+.light:checked + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--toggle-button-color);
+} 
+.normal + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    margin-left: 5px;
+    text-align: center;
+  }
+  
+.normal:checked + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--toggle-button-color);
+    -moz-animation-duration: 0.4s;
+    -moz-animation-name: slidein;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slidein;
+    animation-duration: 0.4s;
+    animation-name: slidein;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .dark + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    text-align: center;
+    margin-right: 5px;
+  }
+  
+.dark:checked + label {
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    background: var(--toggle-button-color);
+    -moz-animation-duration: 0.4s;
+    -moz-animation-name: slideno;
+    -webkit-animation-duration: 0.4s;
+    -webkit-animation-name: slideno;
+    animation-duration: 0.4s;
+    animation-name: slideno;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+label:hover{
+    cursor: pointer;
+}
+@-webkit-keyframes slidein {
+    from {
+      -webkit-transform: translate(50px, 0);
+              transform: translate(50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  
+  @keyframes slidein {
+    from {
+      -webkit-transform: translate(50px, 0);
+              transform: translate(50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  @-webkit-keyframes slideno {
+    from {
+      -webkit-transform: translate(-50px, 0);
+              transform: translate(-50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  @keyframes slideno {
+    from {
+      -webkit-transform: translate(-50px, 0);
+              transform: translate(-50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0px);
+              transform: translate(0px, 0px);
+    }
+  }
+  @-webkit-keyframes returnLeft {
+    from {
+      -webkit-transform: translate(-50px, 0);
+              transform: translate(-50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0);
+              transform: translate(0px, 0);
+    }
+  }
+  @keyframes returnLeft {
+    from {
+      -webkit-transform: translate(-50px, 0);
+              transform: translate(-50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0);
+              transform: translate(0px, 0);
+    }
+  }
+  @-webkit-keyframes returnRight {
+    from {
+      -webkit-transform: translate(50px, 0);
+              transform: translate(50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0);
+              transform: translate(0px, 0);
+    }
+  }
+  @keyframes returnRight {
+    from {
+      -webkit-transform: translate(50px, 0);
+              transform: translate(50px, 0);
+    }
+    to {
+      -webkit-transform: translate(0px, 0);
+              transform: translate(0px, 0);
+    }
+  }
+@media (max-width: 480px) {
+  .calculator{
+    width: 300px;
+    height: 100%;
+  }
+  .calc_buttons{
+    width: 57px;
+    height: 34px;
+    margin: 1px 3px;
+    border-radius: 6px;
+    font-size: 26px;
+    border-bottom: 4px solid var(--button-bottom-color);
+  }
+  .first_row, .second_row, 
+.third_row, .fourth_row, 
+.fifth_row{
+  padding: 3px 0px 5px 0px;
+}
+  .btn_reset, .btn_equal{
+    width: 124px;
+  }
+  #del_btn, #reset_btn{
+    padding-top: 19px;
+    font-size: 17px;
+    border-bottom: 4px solid var(--secondary-button-bottom-color);
+  }
+  .btn_equal{
+    border-bottom: 4px solid var(--tertiary-button-bottom-color);
+  }
+  .title_block p{
+    font-size: 32px;
+  }
+  .calc_top{
+    margin-bottom: 45px;
+  }
+  .theme_block{
+    margin-top: 28px;
+  }
+  .toggle_num{
+    width: 70px;
+    margin-right: 2px;
+  }
+  .toggle_num p{
+    font-size: 14px;
+    margin-bottom: 0px;
+    margin: 7px 5px 3px 8px;
+  }
+  .toggle_sec{
+    margin-top: -10px;
+  }
+  .toggle_sec p{
+    font-size: 14px;
+  }
+}

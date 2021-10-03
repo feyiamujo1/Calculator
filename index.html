@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <style>
+        .attribution { font-size: 11px; text-align: center; }
+        .attribution a { color: hsl(228, 45%, 44%); }
+        .attribution_container{width: 100%; margin-top:20px;}
+      </style>
+    <title>Frontend Mentor | Calculator app</title>
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="calc_top">
+            <div class="title_block">
+                <p>calc</p>
+            </div>
+            <div class="theme_block">
+                <div class="toggle_num">
+                    <p>1</p>
+                    <p>2</p>
+                    <p>3</p>
+                </div>
+                <div class="toggle_sec">
+                    <p>THEME</p>
+                    <div class="container">
+                        <div class="radio-wrapper">
+                            <input type="radio" onclick="switchTheme('normal')" name="event" class="theme-switch normal" checked id="radio-normal" />
+                            <label for="radio-normal"></label>
+                            
+                            <input type="radio" onclick="switchTheme('light')" name="event" class="theme-switch light" id="radio-light" />
+                            <label for="radio-light"></label>
+
+                            <input type="radio" onclick="switchTheme('dark')" name="event" class="theme-switch dark" id="radio-dark" />
+                            <label for="radio-dark"></label>
+                        </div>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+        <div class="calc_layout">
+            <div class="display_screen">
+                <p id="displayresult"></p>
+            </div>
+            <div class="btn_layout">
+                <div class="first_row">
+                    <div class="calc_buttons" onclick="btnsevenclicked()" >7</div>
+                    <div class="calc_buttons" onclick="btneightclicked()">8</div>
+                    <div class="calc_buttons" onclick="btnnineclicked()">9</div>
+                    <div class="calc_buttons"  id="del_btn" onclick="btndelclicked();">DEL</div>
+                </div>
+                <div class="second_row">
+                    <div class="calc_buttons" onclick="btnfourclicked()">4</div>
+                    <div class="calc_buttons" onclick="btnfiveclicked()">5</div>
+                    <div class="calc_buttons" onclick="btnsixclicked()">6</div>
+                    <div class="calc_buttons" onclick="btnplusclicked()">+</div>
+                </div>
+                <div class="third_row">
+                    <div class="calc_buttons" onclick="btnoneclicked()">1</div>
+                    <div class="calc_buttons" onclick="btntwoclicked()">2</div>
+                    <div class="calc_buttons" onclick="btnthreeclicked()">3</div>
+                    <div class="calc_buttons" onclick="btnminusclicked()">-</div>
+                </div>
+                <div class="fourth_row">
+                    <div class="calc_buttons" onclick="bntdotclicked()">.</div>
+                    <div class="calc_buttons" onclick="btnzeroclicked()">0</div>
+                    <div class="calc_buttons" onclick="btndivisionclicked()">/</div>
+                    <div class="calc_buttons" onclick="btnmultiplyclicked()">x</div>
+                </div>
+                <div class="fifth_row">
+                    <div class="calc_buttons btn_reset" id="reset_btn" onclick="btnresetclicked();">RESET</div>
+                    <div class="btn_equal" onclick="btnequalclicked()">=</div>
+                </div>
+            </div>
+        </div>
+        <div class="attribution_container">
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+                Coded by <a href="#">Feyisayo Amujoyegbe</a>.
+            </div>
+        </div>
+    </div>
+    
+    <script type="text/javascript" src="scripts/script.js"></script>
+</body>
+</html>
