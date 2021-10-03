@@ -150,7 +150,7 @@ body{
   cursor: pointer;
   background: var(--button-color);
   color: var(--tertiary-button-color);
-  /*border-bottom: 3px solid var(--tertiary-button-bottom-color);*/
+  border-bottom: 3px solid var(--tertiary-button-bottom-color);
 }
 .calc_buttons:hover{
     cursor: pointer;
@@ -159,7 +159,7 @@ body{
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
     background-size: 100%;
-    transition: 2s;
+    transition: 4s;
     color: cornsilk;
     border-color: black;
 }
