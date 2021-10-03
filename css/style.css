@@ -154,7 +154,7 @@ body{
 }
 .calc_buttons:hover{
     cursor: pointer;
-    background: #808080 radial-gradient(circle, transparent 1%, #A9A9A9 1%) center/15000%;
+    /*background: #808080 radial-gradient(circle, transparent 1%, #A9A9A9 1%) center/15000%;*/
 }
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
@@ -419,7 +419,7 @@ label:hover{
     width: 60%;
   }
   .toggle_num{
-    width: 70px;
+    width: 75px;
     margin-right: 2px;
   }
   .toggle_num p{
