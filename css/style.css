@@ -150,7 +150,6 @@ body{
   cursor: pointer;
   background: var(--button-color);
   color: var(--tertiary-button-color);
-  border-bottom: 3px solid var(--tertiary-button-bottom-color);
 }
 .calc_buttons:hover{
     cursor: pointer;
