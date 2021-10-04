@@ -158,7 +158,6 @@ body{
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
     background-size: 100%;
-    transition: 4s;
     color: cornsilk;
     border-color: black;
 }
