@@ -194,11 +194,10 @@ body{
     padding-bottom: 6px;
     height: 23px;
 }
-
-.calc_buttons:hover{
-    cursor: pointer;
+#reset_btn:active{
+  background: #000000;
+  color: white;
 }
-
 /**For the entire toggle button**/
 .container {
     display: inline-block;
@@ -404,8 +403,17 @@ label:hover{
   .calc_buttons:hover{
     background:none;
   }
+  
   .btn_equal{
     border-bottom: 4px solid var(--tertiary-button-bottom-color);
+  }
+  .btn_equal:active{
+    background: white;
+    color: var(--tertiary-button-bottom-color);
+  }
+  .btn_reset:active{
+    background: #000000;
+    color: white;
   }
   .title_block p{
     font-size: 32px;
