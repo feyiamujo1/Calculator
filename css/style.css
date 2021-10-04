@@ -146,9 +146,19 @@ body{
     color: var(--tertiary-button-font-color);
     border-bottom: 3px solid var(--tertiary-button-bottom-color);
 }
+.btn_equal:hover{
+  cursor: pointer;
+  background: var(--button-color);
+  color: var(--tertiary-button-color);
+}
+.calc_buttons:hover{
+    cursor: pointer;
+    background: #808080;
+}
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
     background-size: 100%;
+    transition: 2s;
     color: cornsilk;
     border-color: black;
 }
@@ -390,6 +400,9 @@ label:hover{
     padding-top: 19px;
     font-size: 17px;
     border-bottom: 4px solid var(--secondary-button-bottom-color);
+  }
+  .calc_buttons:hover{
+    background:none;
   }
   .btn_equal{
     border-bottom: 4px solid var(--tertiary-button-bottom-color);
