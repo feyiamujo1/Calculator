@@ -151,14 +151,17 @@ body{
   background: var(--button-color);
   color: var(--tertiary-button-color);
 }
-.btn_equal:active, .calc_buttons:active{
+.calc_buttons:hover{
+    cursor: pointer;
+    background: #808080;
+}
+.btn_equal:active, #del_btn:active, #reset_btn:active, .calc_buttons:active{
     background-color:#000000;
     background-size: 100%;
     transition: 2s;
     color: cornsilk;
     border-color: black;
 }
-
 .calc_layout{
     padding: 0px 0px 5px 0px;
 }
@@ -189,10 +192,6 @@ body{
     padding-top: 18px;
     padding-bottom: 6px;
     height: 23px;
-}
-#del_btn:active, #reset_btn:active{
-  background: #000000!important;
-  color: white!important;
 }
 /**For the entire toggle button**/
 .container {
@@ -396,20 +395,8 @@ label:hover{
     font-size: 17px;
     border-bottom: 4px solid var(--secondary-button-bottom-color);
   }
-  .calc_buttons:hover{
-    background:none;
-  }
-  
   .btn_equal{
     border-bottom: 4px solid var(--tertiary-button-bottom-color);
-  }
-  .btn_equal:active{
-    background: white;
-    color: var(--tertiary-button-bottom-color);
-  }
-  .btn_reset:active{
-    background: #000000;
-    color: white;
   }
   .title_block p{
     font-size: 32px;
