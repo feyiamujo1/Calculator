@@ -194,9 +194,9 @@ body{
     padding-bottom: 6px;
     height: 23px;
 }
-#reset_btn:active{
-  background: #000000;
-  color: white;
+#del_btn:active, #reset_btn:active{
+  background: #000000!important;
+  color: white!important;
 }
 /**For the entire toggle button**/
 .container {
