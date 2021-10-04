@@ -146,15 +146,6 @@ body{
     color: var(--tertiary-button-font-color);
     border-bottom: 3px solid var(--tertiary-button-bottom-color);
 }
-.btn_equal:hover{
-  cursor: pointer;
-  background: var(--button-color);
-  color: var(--tertiary-button-color);
-}
-.calc_buttons:hover{
-    cursor: pointer;
-    background: #808080;
-}
 .btn_equal:active, .calc_buttons:active{
     background-color:#000000;
     background-size: 100%;
